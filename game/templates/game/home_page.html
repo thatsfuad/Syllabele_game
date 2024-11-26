@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllable Quiz</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jqueryer.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <style>
+        #score-time {
+            display: flex; 
+            justify-content: space-between; 
+            margin-bottom: 10px; 
+        }
+    
+        #score-time div:first-child {
+            margin-right: 50px; 
+        }
+    
+        #time {
+            margin-right: 50px;
+        }
+    
+        #score {
+            margin-left: 10px; 
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Syllable Quiz</h1>
+        </div>
+
+        <div id="score-time">
+            <div style="text-align: left;">Time: <span id="time">0:00</span></div>
+            <div style="text-align: right;"><span id="score">0</span></div>
+        </div>
+        
+        <div class="table-container">
+            <!-- 1st column -->
+            <div class="column" id="column-1">
+                <div class="syllable-box" data-correct="af">af</div>
+                <div class="syllable-box" data-correct="any">any</div>
+                <div class="syllable-box" data-correct="news">news</div>
+                <div class="syllable-box" data-correct="pic">pic</div>
+                <div class="syllable-box" data-correct="Sa">Sa</div>
+                <div class="syllable-box" data-correct="to">to</div>
+                <div class="syllable-box" data-correct="trou">trou</div>
+            </div>
+        
+            <!-- 2nd column -->
+            <div class="column" id="column-2">
+                <div class="syllable-box" data-correct="ter">ter</div>
+                <div class="syllable-box" data-correct="thing">thing</div>
+                <div class="syllable-box" data-correct="pa">pa</div>
+                <div class="syllable-box" data-correct="nic">nic</div>
+                <div class="syllable-box" data-correct="tur">tur</div>
+                <div class="syllable-box" data-correct="ge">ge</div>
+                <div class="syllable-box" data-correct="ble">ble</div>
+            </div>
+        
+            <!-- 3rd column -->
+            <div class="column" id="column-3">
+                <div class="syllable-box" data-correct="noon">noon</div>
+                <div class="syllable-box" data-correct="per">per</div>
+                <div class="syllable-box" data-correct="day">day</div>
+                <div class="syllable-box" data-correct="ther">ther</div>
+                <div class="syllable-box blank" data-correct="blank"></div> 
+                <div class="syllable-box blank" data-correct="blank"></div>
+                <div class="syllable-box blank" data-correct="blank"></div> 
+            </div>
+        </div>
+        
+
+        <!-- Success Message Modal -->
+        <div id="success-message" style="display:none;">Success! All words are matched!</div>
+    </div>
+
+</body>
+</html>

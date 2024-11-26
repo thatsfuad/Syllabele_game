@@ -1,0 +1,116 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.container {
+    margin: 5px auto;
+    width: 50%;
+    padding-bottom: 0;
+}
+
+/* Score Section */
+#score-section {
+     
+    font-size: 18px;
+    color: #333;
+}
+
+#time {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5722;
+}
+
+/* Success Message */
+#success-message {
+    margin-top: 10px; 
+    font-size: 24px;
+    color: green;
+    display: none;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%; 
+    margin: 0 auto; 
+}
+
+.column {
+    flex: 1; 
+    padding: 0 10px;
+}
+
+.column {
+    width: 28%; 
+    min-height: 200px;
+    border: 1px solid #aaa;
+    padding: 10px;
+    background-color: #e0f7fa;
+    overflow-y: auto;
+    margin: 0; 
+}
+
+
+/* Syllable Boxes */
+.syllable-box {
+    width: 80%; 
+    padding: 5px; 
+    background-color: #e0f7fa;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #aaa;
+    cursor: move;
+    margin: 5px auto; 
+}
+
+/* Hover effect */
+.syllable-box:hover {
+    background-color: #b2ebf2;
+    border-color: #00796b;
+}
+
+/* Blank Syllable Boxes */
+.syllable-box.blank {
+    width: 80%; 
+    background-color: transparent;
+    border: 1px solid #aaa;
+    height: 16px; 
+    margin: 5px auto; 
+}
+
+/* Pop-up Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+#popup-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#popup-button:hover {
+    background-color: #004d40;
+}
+
+
